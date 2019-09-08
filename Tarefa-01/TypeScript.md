@@ -144,16 +144,16 @@ A função *somaouconc*  soma ou concatena duas variáveis, por isso, essa funç
     } 
 ```
 **Saída**:  
-Array desordenado: Lucas,Hugo,Otto,Maria Eduarda,Rafaela,Carla,Rodrigo,Adonai,Pedro,Rayane  
-[ 45, 20, 85, 10, 2, 3, 14, 999, 101, 42, 28, 174, 51 ]  
-Array ordenado: Adonai,Carla,Hugo,Lucas,Maria Eduarda,Otto,Pedro,Rafaela,Rayane,Rodrigo  
-[ 2, 3, 10, 14, 20, 28, 42, 45, 51, 85, 101, 174, 999 ]  
+**Array desordenado**: Lucas,Hugo,Otto,Maria Eduarda,Rafaela,Carla,Rodrigo,Adonai,Pedro,Rayane  
+                   [ 45, 20, 85, 10, 2, 3, 14, 999, 101, 42, 28, 174, 51 ]  
+**Array ordenado**: Adonai,Carla,Hugo,Lucas,Maria Eduarda,Otto,Pedro,Rafaela,Rayane,Rodrigo  
+                   [ 2, 3, 10, 14, 20, 28, 42, 45, 51, 85, 101, 174, 999 ]  
+
 Nesse algoritmo de ordenação aproveito de um dos recursos do Typescript, o de **tipos condicionais**, e com isso ordeno tanto strings e inteiros na mesma função de um jeito simples.  
 #### Referências
-[Referência para os tipos condicionais](https://artsy.github.io/blog/2018/11/21/conditional-types-in-typescript/)
-
-[Manual do TypeScript - Tipos Básicos](https://www.typescriptlang.org/docs/handbook/basic-types.html)
-
-[Manual do TypeScript - Tipos Avançados](https://www.typescriptlang.org/docs/handbook/advanced-types.html)
+[Referência para os tipos condicionais](https://artsy.github.io/blog/2018/11/21/conditional-types-in-typescript/)  
+[Manual do TypeScript - Tipos Básicos](https://www.typescriptlang.org/docs/handbook/basic-types.html)  
+[Manual do TypeScript - Tipos Avançados](https://www.typescriptlang.org/docs/handbook/advanced-types.html)  
+[Objetos - Referências de valores](https://blog.da2k.com.br/2017/01/25/objetos-referencias-de-valores-em-javascript/)  
 
 
