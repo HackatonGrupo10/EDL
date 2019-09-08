@@ -113,32 +113,42 @@ A função *tipo* verifica o tipo de uma variável.
             return "As variáveis não possuem o mesmo tipo"; }
 ```
 **Saída**: As variáveis não possuem o mesmo tipo.  
-A função *somaouconc*  soma ou concatena duas variáveis, por isso, essa função pode retornar string ou number. Esse é um exemplo de uma função com retorno com tipos diferentes dependendo do tipo da variável passado por valor.  
+A função *somaouconc*  soma ou concatena duas variáveis, por isso, essa função pode retornar string ou number. Esse é um exemplo de uma função com retorno com tipos diferentes dependendo do tipo da variável passado por valor.    
 #### Algoritmo de ordenação por inserção em Typescript
 ```ts
-    // Algoritmo de ordenação por insercao em typescript
+    // Função de ordenação que ordena tanto inteiro quanto strings
     var nomes : Array<string>;
+    var num : Array<number>;
+    num = [45,20,85,10,2,3,14,999,101,42,28,174,51];
     nomes = ["Lucas", "Hugo","Otto","Maria Eduarda","Rafaela","Carla","Rodrigo","Adonai","Pedro","Rayane"];
-    var i,j,mini : number;
     console.log("Array desordenado: %s", nomes);
-    for (i=0; i < nomes.length -1; i++){
-        var aux : string;
-        mini = i;
-        for (j=i+1; j < nomes.length; j++){
-            if (nomes[j] < nomes[mini])
-                mini = j;          
+    console.log(num); 
+    ordecao(nomes);  // os arrays são passados por referência
+    ordecao(num);
+    console.log("Array ordenado: %s",nomes);
+    console.log(num);
+
+    function ordecao (nom : Array<string>|Array <number>): void{
+        let aux : any; // recebe qualquer tipo
+        let i,j,mini : number;
+        for (i=0; i < nom.length -1; i++){
+            mini = i;
+            for (j=i+1; j < nom.length; j++){
+                if (nom[j] < nom[mini])
+                    mini = j;          
+            }
+            aux = nom[i];
+            nom[i] = nom[mini];
+            nom[mini] = aux;
         }
-        aux = nomes[i];
-        nomes[i] = nomes[mini];
-        nomes[mini] = aux;
-    }
-    console.log("Array ordenado %s",nomes);  
+    } 
 ```
-**Saída**:
-
-Array desordenado: Lucas,Hugo,Otto,Maria Eduarda,Rafaela,Carla,Rodrigo,Adonai,Pedro,Rayane
-
-Array ordenado: Adonai,Carla,Hugo,Lucas,Maria Eduarda,Otto,Pedro,Rafaela,Rayane,Rodrigo
+**Saída**:  
+Array desordenado: Lucas,Hugo,Otto,Maria Eduarda,Rafaela,Carla,Rodrigo,Adonai,Pedro,Rayane  
+[ 45, 20, 85, 10, 2, 3, 14, 999, 101, 42, 28, 174, 51 ]  
+Array ordenado: Adonai,Carla,Hugo,Lucas,Maria Eduarda,Otto,Pedro,Rafaela,Rayane,Rodrigo  
+[ 2, 3, 10, 14, 20, 28, 42, 45, 51, 85, 101, 174, 999 ]  
+Nesse algoritmo de ordenação aproveito de um dos recursos do Typescript, o de **tipos condicionais**, e com isso ordeno tanto strings e inteiros na mesma função de um jeito simples.  
 #### Referências
 [Referência para os tipos condicionais](https://artsy.github.io/blog/2018/11/21/conditional-types-in-typescript/)
 
