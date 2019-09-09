@@ -46,7 +46,7 @@ O TypeScript também possui o recurso da inferência de tipos, nem todas as ling
        console.log("Olá %s você tem %d anos e seu email : %s",pessoa.nome, pessoa.idade, pessoa.email);
     }
  
-    var pessoa = { nome : "Lucas" , idade : 22, email : "lucascosta2822@gmail.com"};
+    var pessoa = { nome : "nome" , idade : 22, email : "email@gmail.com"};
     exe(pessoa);
 ```    
 #### Código anterior em JavaScript
@@ -54,7 +54,7 @@ O TypeScript também possui o recurso da inferência de tipos, nem todas as ling
     function exe(Ipessoa) {
       console.log("Olá %s você tem %d anos e seu email : %s", pessoa.nome, pessoa.idade, pessoa.email);
     }
-    var pessoa = { nome: "Lucas", idade: 22, email: "lucascosta2822@gmail.com" };
+    var pessoa = { nome: "nome", idade: 22, email: "email@gmail.com" };
     exe(pessoa);
 ```    
 No exemplo acima os códigos executam a mesma coisa e possuem sintaxes semelhantes, mas o Typescript tem o recurso Interface que ajuda a entender como o objeto funciona, tornando o código mais fácil de ser entendido e também mais fácil de corrigir. Porém o código fica maior. O recurso interface não existe no JavaScript.
@@ -97,7 +97,7 @@ A função *tipo* verifica o tipo de uma variável.
 #### Código que tem uma função com o tipo de retorno condicional
 ```ts
     var x,y : number | string;
-    x = 'Lu';
+    x = 'Nm';
     y = 6;
     var z = somaouconc(x,y);
     if (typeof z === 'number')
