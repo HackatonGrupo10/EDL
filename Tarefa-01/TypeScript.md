@@ -114,7 +114,7 @@ A função *tipo* verifica o tipo de uma variável.
 ```
 **Saída**: As variáveis não possuem o mesmo tipo.  
 A função *somaouconc*  soma ou concatena duas variáveis, por isso, essa função pode retornar string ou number. Esse é um exemplo de uma função com retorno com tipos diferentes dependendo do tipo da variável passado por valor.    
-#### Algoritmo de ordenação por inserção em Typescript
+#### Algoritmo de ordenação por seleção em Typescript
 ```ts
     // Função de ordenação que ordena tanto inteiro quanto strings
     var nomes : Array<string>;
